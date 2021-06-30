@@ -1,0 +1,32 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Corredor</th>
+            <th>Equipo</th>
+            <th>Age</th>
+            <th>Nationality</th>
+            <th>Imagen Corredor</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{corredor.name}}</td>
+            <td>{{corredor.team}}</td>
+            <td>{{corredor.age}}</td>
+            <td>{{corredor.nationality}}</td>
+            <td><img [src]="corredor.imgCorredor" [alt]="corredor.name"></td>
+        </tr>
+        <tr>
+            <td>Lewis Hamilton</td>
+            <td>Mercedez</td>
+            <td>37</td>
+            <td>Britanico</td>
+        </tr>
+        <tr>
+            <td>Checo Perez</td>
+            <td>Red Bull</td>
+            <td>32</td>
+            <td>Mexicano</td>
+        </tr>
+    </tbody>
+</table>
