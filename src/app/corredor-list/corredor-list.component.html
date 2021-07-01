@@ -5,28 +5,18 @@
             <th>Equipo</th>
             <th>Age</th>
             <th>Nationality</th>
-            <th>Imagen Corredor</th>
+            <th>Imagen</th>
+            <th>Campeon</th>
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>{{corredor.name}}</td>
+        <tr *ngFor="let corredor of corredores" [ngClass]="{'champion': corredor.champion}">
+            <td>{{corredor.name | uppercase}}</td>
             <td>{{corredor.team}}</td>
             <td>{{corredor.age}}</td>
             <td>{{corredor.nationality}}</td>
             <td><img [src]="corredor.imgCorredor" [alt]="corredor.name"></td>
-        </tr>
-        <tr>
-            <td>Lewis Hamilton</td>
-            <td>Mercedez</td>
-            <td>37</td>
-            <td>Britanico</td>
-        </tr>
-        <tr>
-            <td>Checo Perez</td>
-            <td>Red Bull</td>
-            <td>32</td>
-            <td>Mexicano</td>
+            <td><span class="badge bg-primary" *ngIf="corredor.champion==true">Campeon del Mundo</span></td>
         </tr>
     </tbody>
 </table>
