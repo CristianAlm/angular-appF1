@@ -12,22 +12,24 @@ export class CorredorListComponent implements OnInit {
     {
       name: "Charles Leclerc",
       team: "Ferrari",
-      age: 28,
+      age: 23,
       nationality: "Monegasco",
       champion: false,
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus minima, aliquam illum enim, earum obcaecati, sunt non magnam quisquam nihil est dolores. Soluta tempore quae corrupti odio distinctio reiciendis laudantium.",
       imgCorredor: "assets/img/leclerc.jpg",
       imgTeam: "assets/img/ferrari.jpg",
+      elegido:false,
     },
     {
       name: "Lewis Hamilton",
       team: "Mercedes",
-      age: 34,
+      age: 36,
       nationality: "Britanico",
       champion: true,
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus minima, aliquam illum enim, earum obcaecati, sunt non magnam quisquam nihil est dolores. Soluta tempore quae corrupti odio distinctio reiciendis laudantium.",
       imgCorredor: "assets/img/hamilton.jpg",
       imgTeam: "assets/img/mercedes.jpg",
+      elegido:false,
     },
     {
       name: "Max Verstappen",
@@ -38,6 +40,7 @@ export class CorredorListComponent implements OnInit {
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus minima, aliquam illum enim, earum obcaecati, sunt non magnam quisquam nihil est dolores. Soluta tempore quae corrupti odio distinctio reiciendis laudantium.",
       imgCorredor: "assets/img/verstappen.jpg",
       imgTeam: "assets/img/redBull.jpg",
+      elegido:false,
     },
     {
       name: "Lando Norris",
@@ -48,12 +51,20 @@ export class CorredorListComponent implements OnInit {
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus minima, aliquam illum enim, earum obcaecati, sunt non magnam quisquam nihil est dolores. Soluta tempore quae corrupti odio distinctio reiciendis laudantium.",
       imgCorredor: "assets/img/norris.jpg",
       imgTeam: "assets/img/mcLaren.jpg",
+      elegido:false,
     }
   ];
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+  eleccion(corredor: Corredor): void{
+    if(corredor.elegido == false){
+      corredor.elegido= true;   
+    }else{
+      corredor.elegido= false;
+    }
   }
 
 }
