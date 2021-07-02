@@ -59,12 +59,6 @@ export class CorredorListComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  eleccion(corredor: Corredor): void{
-    if(corredor.elegido == false){
-      corredor.elegido= true;   
-    }else{
-      corredor.elegido= false;
-    }
-  }
+  
 
 }

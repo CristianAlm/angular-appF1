@@ -7,6 +7,7 @@ import { CorredorListComponent } from './corredor-list/corredor-list.component';
 import { CorredorAboutComponent } from './corredor-about/corredor-about.component';
 import { CorredorElegidoComponent } from './corredor-elegido/corredor-elegido.component';
 import { CorredorGeneralComponent } from './corredor-general/corredor-general.component';
+import { InputElegirComponent } from './input-elegir/input-elegir.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { CorredorGeneralComponent } from './corredor-general/corredor-general.co
     CorredorListComponent,
     CorredorAboutComponent,
     CorredorElegidoComponent,
-    CorredorGeneralComponent
+    CorredorGeneralComponent,
+    InputElegirComponent
   ],
   imports: [
     BrowserModule,
