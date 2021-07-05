@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { Corredor } from '../corredor-list/Corredor';
 
 @Component({
@@ -13,6 +13,11 @@ export class InputElegirComponent implements OnInit {
   @Input()
   corredor!: Corredor;
 
+  /**
+   * 
+  @Output()
+  corredorChange: EventEmitter<Corredor> = new EventEmitter<Corredor>();
+*/
   ngOnInit(): void {
   }
 
