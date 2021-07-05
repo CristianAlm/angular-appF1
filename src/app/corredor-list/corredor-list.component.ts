@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, SecurityContext } from '@angular/core';
+import { CorredorMostrarService } from '../corredor-mostrar.service';
 import { Corredor } from './Corredor';
 
 @Component({
@@ -55,10 +56,15 @@ export class CorredorListComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(private mostrar: CorredorMostrarService) {
+    
+  }
 
   ngOnInit(): void {
   }
   
+  addToMostrar(corredor: Corredor): void{
+    this.mostrar.addToMostrar(corredor);
+  }
 
 }

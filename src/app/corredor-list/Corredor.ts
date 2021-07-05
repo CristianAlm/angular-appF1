@@ -7,5 +7,5 @@ export interface Corredor {
     description: string;
     imgCorredor: string;
     imgTeam: string;
-    elegido:boolean;
+    elegido: boolean;
 }
