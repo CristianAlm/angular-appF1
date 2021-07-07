@@ -2,6 +2,10 @@
 
 <ul>
     <li *ngFor="let corredor of mostrarCorredor">
-        {{corredor.name}}:{{corredor.team}}
+        El corredor elegido es {{corredor.name}} del equipo {{corredor.team}}
+        <p>Nacionalidad: {{corredor.nationality}}</p>
+        <p>Su caracteristicas son:</p>
+        <p>{{corredor.description}}</p>
+        <img src="{{corredor.imgCorredor}}" alt="">
     </li>
 </ul>
