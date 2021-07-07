@@ -9,6 +9,8 @@ import { CorredorElegidoComponent } from './corredor-elegido/corredor-elegido.co
 import { CorredorGeneralComponent } from './corredor-general/corredor-general.component';
 import { InputElegirComponent } from './input-elegir/input-elegir.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,8 @@ import { InputElegirComponent } from './input-elegir/input-elegir.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

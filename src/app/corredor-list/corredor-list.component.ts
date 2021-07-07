@@ -1,4 +1,5 @@
 import { Component, OnInit, SecurityContext } from '@angular/core';
+import { CorredorDataService } from '../corredor-data.service';
 import { CorredorMostrarService } from '../corredor-mostrar.service';
 import { Corredor } from './Corredor';
 
@@ -9,8 +10,26 @@ import { Corredor } from './Corredor';
 })
 export class CorredorListComponent implements OnInit {
 
-  corredores: Corredor[] = [
-    {
+  corredores: Corredor[] = [];
+
+  constructor(
+    private mostrar: CorredorMostrarService,
+    private corredoresDataService: CorredorDataService) {//Este es el servicio
+    
+  }
+
+  ngOnInit(): void {
+    this.corredoresDataService.getAll().subscribe(corredores => this.corredores = corredores);
+  }
+  
+  addToMostrar(corredor: Corredor): void{
+    this.mostrar.addToMostrar(corredor);
+  }
+
+}
+
+/**
+ * {
       name: "Charles Leclerc",
       team: "Ferrari",
       age: 23,
@@ -54,17 +73,4 @@ export class CorredorListComponent implements OnInit {
       imgTeam: "assets/img/mcLaren.jpg",
       elegido:false,
     }
-  ];
-
-  constructor(private mostrar: CorredorMostrarService) {
-    
-  }
-
-  ngOnInit(): void {
-  }
-  
-  addToMostrar(corredor: Corredor): void{
-    this.mostrar.addToMostrar(corredor);
-  }
-
-}
+ */
