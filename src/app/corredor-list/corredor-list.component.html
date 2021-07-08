@@ -6,9 +6,9 @@
             <!--<th>Nationality</th>-->
             <th>Imagen</th>
             <th>Campeon</th>
-            <th>Eleccion</th>
+            <th>Elegir</th>
             <!--<th>prueba</th>-->
-            <th></th>
+            <th>Mostrar</th>
         </tr>
     </thead>
     <tbody>
@@ -23,7 +23,7 @@
             </td>
             <!--<td>{{corredor.elegido}}</td>-->
             <td>
-                <button class="btn btn-outline-primary" (click)="addToMostrar(corredor)">Mostrar</button>
+                <button *ngIf="corredor.elegido==true" class="btn btn-outline-primary" (click)="addToMostrar(corredor)">Mostrar</button>
             </td>
         </tr>
     </tbody>

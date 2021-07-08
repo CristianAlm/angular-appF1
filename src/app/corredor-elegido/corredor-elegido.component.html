@@ -1,12 +1,25 @@
 <h2>Corredor elegido</h2>
 
-<ul>
-    <li *ngFor="let corredor of mostrarCorredor">
+<!-- 
+    <ul>
+        <li *ngFor="let corredor of mostrarCorredor">
+            El corredor elegido es {{corredor.name}} del equipo {{corredor.team}}
+            <p>Nacionalidad: {{corredor.nationality}}</p>
+            <p>Su caracteristicas son:</p>
+            <p>{{corredor.description}}</p>
+            <img src="{{corredor.imgCorredor}}" alt="">
+            <p>El corredor fue seleccionado: {{corredor.elegido}}</p>
+        </li>
+    </ul>
+-->
+
+<article *ngFor="let corredor of mostrarCorredor">
+    <ul *ngIf="corredor.elegido==true">
         El corredor elegido es {{corredor.name}} del equipo {{corredor.team}}
-        <p>Nacionalidad: {{corredor.nationality}}</p>
-        <p>Su caracteristicas son:</p>
-        <p>{{corredor.description}}</p>
-        <img src="{{corredor.imgCorredor}}" alt="">
-        <p>El corredor fue seleccionado: {{corredor.elegido}}</p>
-    </li>
-</ul>
+            <p>Nacionalidad: {{corredor.nationality}}</p>
+            <p>Su caracteristicas son:</p>
+            <p>{{corredor.description}}</p>
+            <img src="{{corredor.imgCorredor}}" alt="">
+            <p>El corredor fue seleccionado: {{corredor.elegido}}</p>
+    </ul>
+</article>

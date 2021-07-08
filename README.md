@@ -1,5 +1,7 @@
 Link de mockAPI: 'https://60e5526f5bcbca001749ecc1.mockapi.io/api/corredor1/Corredor'
 
+Por el momento para comunicar componentes hay que clickear el boton "Elegir" para luego Mostrar 
+
 # AppF1
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.0.
