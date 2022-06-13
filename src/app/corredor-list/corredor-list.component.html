@@ -19,7 +19,7 @@
             <td><img [src]="corredor.imgCorredor" [alt]="corredor.name"></td>
             <td><span class="badge bg-primary" *ngIf="corredor.champion==true">Campeon del Mundo</span></td>
             <td>
-                <app-input-elegir [corredor]="corredor"></app-input-elegir>
+                <app-input-elegir [(elegido)]="corredor.elegido"></app-input-elegir>
             </td>
             <!--<td>{{corredor.elegido}}</td>-->
             <td>

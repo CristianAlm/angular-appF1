@@ -1,5 +1,4 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
-import { Corredor } from '../corredor-list/Corredor';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-input-elegir',
@@ -11,21 +10,21 @@ export class InputElegirComponent implements OnInit {
   constructor() { }
 
   @Input()
-  corredor!: Corredor;
+  elegido!: boolean;
 
-  /**
-   * 
   @Output()
-  corredorChange: EventEmitter<Corredor> = new EventEmitter<Corredor>();
-*/
+  elegidoChange: EventEmitter<boolean> = new EventEmitter<boolean>();
+
   ngOnInit(): void {
   }
 
-  eleccion(corredor: Corredor): void{
-    if(corredor.elegido == false){
-      corredor.elegido= true;   
+  eleccion(): void{
+    if(this.elegido == false){
+      this.elegido= true;
+      this.elegidoChange.emit(this.elegido);   
     }else{
-      corredor.elegido= false;
+      this.elegido= false;
+      this.elegidoChange.emit(this.elegido);
     }
   }
 
